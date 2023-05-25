@@ -18,9 +18,11 @@ var new21Game = function(n, k, maxPts) {
             s -= dp[i-maxPts];
         }
     }
+
     let ans = 0;
     for(let i=k; i<=n; i++) {
         ans += dp[i];
     }
+    
     return ans;
 };
