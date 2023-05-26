@@ -1,10 +1,14 @@
 # Definition for singly-linked list.
-# class ListNode:
+# class ListNode(object):
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
-class Solution:
-    def pairSum(self, head: Optional[ListNode]) -> int:
+class Solution(object):
+    def pairSum(self, head):
+        """
+        :type head: Optional[ListNode]
+        :rtype: int
+        """
         current = head
         values = []
 
@@ -15,7 +19,6 @@ class Solution:
         i = 0
         j = len(values) - 1
         maximumSum = 0
-        
         while(i < j):
             maximumSum = max(maximumSum, values[i] + values[j])
             i = i + 1
