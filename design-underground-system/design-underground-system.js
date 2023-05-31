@@ -37,9 +37,9 @@ UndergroundSystem.prototype.checkOut = function(id, stationName, t) {
  * @return {number}
  */
 UndergroundSystem.prototype.getAverageTime = function(startStation, endStation) {
-    const { avg } = this
-    const key = `e:${endStation}+s:${startStation}`
-    const { total, count } = avg[key]
+    const { avg } = this;
+    const key = `e:${endStation}+s:${startStation}`;
+    const { total, count } = avg[key];
     return total / count;
 
 };
