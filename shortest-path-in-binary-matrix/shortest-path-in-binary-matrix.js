@@ -34,6 +34,7 @@ var shortestPathBinaryMatrix = function(grid) {
             queue.push([x, y, path+1]);
             grid[x][y] = 1; 
         }
-    } 
+    }
+     
     return -1;
 };
