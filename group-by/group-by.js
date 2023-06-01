@@ -5,12 +5,12 @@
 Array.prototype.groupBy = function(fn) {
     let obj = {};
 
-    for(const item of this) {
-        const key = fn(item);
+    for(let i=0; i<this.length; i++) {
+        const key = fn(this[i]);
         if(obj.hasOwnProperty(key)) {
-            obj[key].push(item);
+            obj[key].push(this[i]);
         } else {
-            obj[key] = [item];
+            obj[key] = [this[i]];
         }
     }
 
