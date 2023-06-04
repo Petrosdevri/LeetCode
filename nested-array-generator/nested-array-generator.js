@@ -3,19 +3,13 @@
  * @return {Generator}
  */
 var inorderTraversal = function*(arr) {
-    const stack = [arr];
+    if(!Array.isArray(arr)) {
+        yield arr;
+        return;
+    }
 
-    while(stack.length > 0) {
-        const current = stack.pop();
-
-        if (!Array.isArray(current)) {
-            yield current;
-            continue;
-        }
-
-        for (let i=current.length-1; i>=0; i--) {
-            stack.push(current[i]);
-        }
+    for(let num of arr) {
+        yield* inorderTraversal(num);
     }
 };
 
