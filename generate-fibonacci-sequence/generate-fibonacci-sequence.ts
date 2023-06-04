@@ -1,13 +1,8 @@
-function* fibGenerator(): Generator<number, any, number> {
-    let a: number = 0;
-    let b: number = 1;
+function* fibGenerator(a: number = 0, b: number = 1): Generator<number, any, number> {
     yield a;
-    yield b;
 
     while(true) {
-        let c: number = a+b;
-        yield c;
-        [a, b] = [b, c];
+        yield* fibGenerator(b, a+b);
     }
 };
 
