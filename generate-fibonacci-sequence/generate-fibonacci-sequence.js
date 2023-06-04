@@ -8,7 +8,7 @@ var fibGenerator = function*() {
     yield b;
 
     while(true){
-        let c= a+b;
+        let c = a+b;
         yield c;
         a = b;
         b = c;
