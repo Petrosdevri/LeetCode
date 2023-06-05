@@ -3,6 +3,7 @@
  * @return {boolean}
  */
 var checkStraightLine = function(coordinates) {
+    if(coordinates.length == 2) return true;
 
     const getDX = (a, b) => {
         return a[0] - b[0];
